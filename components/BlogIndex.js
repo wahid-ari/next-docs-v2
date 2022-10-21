@@ -16,12 +16,12 @@ export default function BlogIndex({ more = "Read more" }) {
         </h3>
         <p className="opacity-80 !mt-0 pt-3">
           {page.frontMatter?.description}{" "}
-          <Link href={page.route}>{more}</Link>
+          <Link href={page.route}>{more + " ➔"}</Link>
         </p>
         {page.frontMatter?.date ? (
-          <p className="opacity-50 text-sm !mt-0 pt-2.5">{page.frontMatter.date}</p>
+          <p className="text-gray-500 text-sm !mt-0 pt-2.5">{page.frontMatter.date}</p>
         ) : null}
-        <hr></hr>
+        <hr className="border-t dark:border-neutral-800" />
       </div>
     );
   });
