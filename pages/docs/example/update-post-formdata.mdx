@@ -14,7 +14,7 @@ When a Form Data object is saved, the object properties are automatically added 
 
 | Field       | Type     | Required |
 | :---------- | :------- | :------: |
-| title       | String   |    ✔️    |
+| title       | string   |    ✔️    |
 | description | string   |    ✔️    |
 | category[]  | string   |    ✔️    |
 | category[]  | string   |    ✔️    |
@@ -23,7 +23,7 @@ When a Form Data object is saved, the object properties are automatically added 
 
 ```json
 {
-  "message": "Success edit data",
+  "message": "success edit data",
   "status": 200
 }
 ```
@@ -33,9 +33,9 @@ When a Form Data object is saved, the object properties are automatically added 
 ```json
 {
   "error": {
-    "title": ["Title can't be empty"],
-    "description": ["Description can't be empty"],
-    "category": ["Category can't be empty"]
+    "title": ["title can't be empty"],
+    "description": ["description can't be empty"],
+    "category": ["category can't be empty"]
   }
 }
 ```

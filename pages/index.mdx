@@ -40,7 +40,7 @@ export function Cobe() {
 			baseColor: [1, 1, 1],
 			markerColor: [251 / 255, 100 / 255, 21 / 255],
 			glowColor: [1.2, 1.2, 1.2],
-			opacity: .6,
+			opacity: 0.6,
 			markers: [
 				{ location: [52.52, 13.405], size: 0.1 },
 				{ location: [35.676, 139.65], size: 0.1 },
@@ -64,8 +64,9 @@ export function Cobe() {
 		return () => globe.destroy();
 	}, []);
 	return (
-		<div className="mt-16" 
-		style={{
+		<div
+			className="mt-16"
+			style={{
 				width: "100%",
 				maxWidth: 500,
 				aspectRatio: 1,

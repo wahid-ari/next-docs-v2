@@ -15,6 +15,13 @@ export default {
   unstable_flexsearch: true,
   // unstable_faviconGlyph: '⚫️',
   floatTOC: true,
+  feedbackLink: () => {
+    const { locale } = useRouter();
+    return (
+      "Give us feedback ➔"
+    );
+  },
+  feedbackLabels: "feedback",
   logo: () => {
     const { route } = useRouter()
     return (
@@ -105,7 +112,7 @@ export default {
     if (route.includes('/showcases/')) {
       return null
     }
-    return 'Edit this page on GitHub'
+    return 'Edit this page on GitHub ➔'
   },
   gitTimestamp: false,
 }
