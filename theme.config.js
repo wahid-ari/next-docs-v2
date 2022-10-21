@@ -1,15 +1,15 @@
 import { useRouter } from 'next/router'
 
 const Logo = ({ height }) => (
-  <svg height={height} xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+  <svg height={height} xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
   </svg>
 )
 
 export default {
-  projectLink: 'https://github.com/wahidari/next-docs-v2',
-  github: 'https://github.com/wahidari/next-docs-v2',
-  docsRepositoryBase: 'https://github.com/wahidari/next-docs-v2/blob/main',
+  projectLink: 'https://github.com/wahid-ari/next-docs-v2',
+  github: 'https://github.com/wahid-ari/next-docs-v2',
+  docsRepositoryBase: 'https://github.com/wahid-ari/next-docs-v2/blob/main',
   search: true,
   titleSuffix: ' – Next Docs v2',
   unstable_flexsearch: true,
@@ -50,13 +50,13 @@ export default {
         <meta name="description" content={meta.description || "Next Docs v2"} />
         <meta name="og:description" content={meta.description || "Next Docs v2"} />
         <meta name="og:title" content={title ? title + " - Next Docs v2" : "Next Docs v2"} />
-        <meta name="og:image" content="https://desa-api-docs.vercel.app/og.png" />
+        <meta name="og:image" content="https://next-docs-v2.vercel.app/og.png" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site:domain" content="desa-api-docs.vercel.app" />
+        <meta name="twitter:site:domain" content="next-docs-v2.vercel.app" />
         <meta name='twitter:site' content='@wahiidari' />
-        <meta name="twitter:url" content="https://desa-api-docs.vercel.app" />
-        <meta name="twitter:image" content="https://desa-api-docs.vercel.app/og.png" />
+        <meta name="twitter:url" content="https://next-docs-v2.vercel.app" />
+        <meta name="twitter:image" content="https://next-docs-v2.vercel.app/og.png" />
 
         <meta name="apple-mobile-web-app-title" content="Next Docs v2" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png" />

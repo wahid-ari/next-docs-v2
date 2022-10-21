@@ -135,13 +135,15 @@ import Badge from '@components/Badge'
 <Badge variant="dark">Dark</Badge>
 ```
 
-<Badge>😂 Default</Badge>
-<Badge variant="success">Success</Badge>
-<Badge variant="warning">Warning</Badge>
-<Badge variant="info">Info</Badge>
-<Badge variant="purple">Purple</Badge>
-<Badge variant="danger">Danger</Badge>
-<Badge variant="dark">Dark</Badge>
+<div className="flex flex-wrap gap-y-3">
+	<Badge>😂 Default</Badge>
+	<Badge variant="success">Success</Badge>
+	<Badge variant="warning">Warning</Badge>
+	<Badge variant="info">Info</Badge>
+	<Badge variant="purple">Purple</Badge>
+	<Badge variant="danger">Danger</Badge>
+	<Badge variant="dark">Dark</Badge>
+</div>
 
 ## Badge Outline
 
@@ -157,13 +159,15 @@ import BadgeOutline from '@components/BadgeOutline'
 <BadgeOutline variant="dark">Dark</BadgeOutline>
 ```
 
-<BadgeOutline>😂 Default</BadgeOutline>
-<BadgeOutline variant="success">Success</BadgeOutline>
-<BadgeOutline variant="warning">Warning</BadgeOutline>
-<BadgeOutline variant="info">Info</BadgeOutline>
-<BadgeOutline variant="purple">Purple</BadgeOutline>
-<BadgeOutline variant="danger">Danger</BadgeOutline>
-<BadgeOutline variant="dark">Dark</BadgeOutline>
+<div className="flex flex-wrap gap-y-3">
+	<BadgeOutline>😂 Default</BadgeOutline>
+	<BadgeOutline variant="success">Success</BadgeOutline>
+	<BadgeOutline variant="warning">Warning</BadgeOutline>
+	<BadgeOutline variant="info">Info</BadgeOutline>
+	<BadgeOutline variant="purple">Purple</BadgeOutline>
+	<BadgeOutline variant="danger">Danger</BadgeOutline>
+	<BadgeOutline variant="dark">Dark</BadgeOutline>
+</div>
 
 ## Alert
 
@@ -415,7 +419,7 @@ console.log("hello, world");
 
 Renders:
 
-```js
+```js filename="index.mdx"
 console.log("hello, world");
 ```
 
@@ -437,6 +441,7 @@ function Profile() {
 
 Renders:
 
+````markdown filename="index.mdx"
 ```jsx highlight=4,6-8
 import useSWR from "swr";
 
@@ -448,6 +453,7 @@ function Profile() {
 	return <div>hello {data.name}!</div>;
 }
 ```
+````
 
 ## Inline Code
 

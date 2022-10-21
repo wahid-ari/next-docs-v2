@@ -10,7 +10,7 @@ export default function Alert({ variant, children }) {
         {children}
       </div>
     : variant == "warning" ?
-      <div className="p-3 font-normal mb-4 text-sm rounded-lg text-yellow-500 bg-yellow-200" role="alert">
+      <div className="p-3 font-normal mb-4 text-sm rounded-lg text-yellow-600 bg-yellow-200" role="alert">
         {children}
       </div>
     : variant == "info" ?

@@ -5,6 +5,7 @@ title: Welcome
 import createGlobe from "cobe";
 import { useEffect, useRef } from "react";
 import { useSpring } from "react-spring";
+import Link from "next/link";
 
 export function Cobe() {
 	const canvasRef = useRef();
@@ -31,24 +32,25 @@ export function Cobe() {
 			width: width * 2,
 			height: width * 2,
 			phi: 0,
-			theta: -0.25,
+			theta: 0.2,
 			dark: 1,
-			diffuse: 5,
+			diffuse: 3,
 			mapSamples: 16000,
-			mapBrightness: 12,
+			mapBrightness: 1.2,
 			baseColor: [1, 1, 1],
-			markerColor: [251 / 255, 20 / 255, 21 / 255],
+			markerColor: [251 / 255, 100 / 255, 21 / 255],
 			glowColor: [1.2, 1.2, 1.2],
+			opacity: .6,
 			markers: [
-        { location: [52.52, 13.405], size: 0.07},
-        { location: [35.676, 139.65], size: 0.07},
-        { location: [-34.60, -58.38], size: 0.07},
-        { location: [-6.22, 106.68], size: 0.07},
-        { location: [-13.09, 23.35], size: 0.07},
-        { location: [23.97, 36.04], size: 0.07},
-        { location: [-41.44, 145.00], size: 0.07},
-        { location: [36.24, -113.74], size: 0.07},
-      ],
+				{ location: [52.52, 13.405], size: 0.1 },
+				{ location: [35.676, 139.65], size: 0.1 },
+				{ location: [-34.6, -58.38], size: 0.1 },
+				{ location: [-6.22, 106.68], size: 0.1 },
+				{ location: [-13.09, 23.35], size: 0.1 },
+				{ location: [23.97, 36.04], size: 0.1 },
+				{ location: [-41.44, 145.0], size: 0.1 },
+				{ location: [36.24, -113.74], size: 0.1 },
+			],
 			onRender: (state) => {
 				// Called on every animation frame.
 				// `state` will be an empty object, return updated params.
@@ -62,8 +64,8 @@ export function Cobe() {
 		return () => globe.destroy();
 	}, []);
 	return (
-		<div
-			style={{
+		<div className="mt-16" 
+		style={{
 				width: "100%",
 				maxWidth: 500,
 				aspectRatio: 1,
@@ -136,12 +138,12 @@ export function Cobe() {
 	);
 }
 
-<Cobe />
-
-import Link from "next/link";
+<div className="mt-20 sm:mt-0">
+	<Cobe />
+</div>
 
 <div className="text-center">
-	<div className="inline-flex justify-center cta-container">
+	<div className="inline-flex justify-center cta-container mt-2">
 		<Link href="/docs">
 			<a className="cta" draggable="false">
 				Get Started
@@ -155,7 +157,7 @@ import Link from "next/link";
 			Playground
 		</a> */}
 	</div>
-	<div className="mt-2" />
+	{/* <div className="mt-2" /> */}
 	{/* <a
 		href="https://twitter.com/shuding_/status/1475916082875666441"
 		target="_blank"

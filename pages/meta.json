@@ -2,16 +2,21 @@
   "index": {
     "title": "Home",
     "type": "page",
-    "hidden": true,
-    "theme": {
-      "sidebar": false,
-      "toc": false,
-      "footer": true,
-      "pagination": true,
-      "breadcrumb": false
-    }
+    "hidden": true
   },
   "docs": {
+    "title": "Docs",
     "type": "page"
+  },
+  "usage": {
+    "title": "Usage",
+    "type": "page"
+  },
+  "blog": {
+    "title": "Blog",
+    "type": "page",
+    "theme": {
+      "sidebar": false
+    }
   }
 }

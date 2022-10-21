@@ -1,4 +1,4 @@
-# Auto Rotate
+# Scaled
 
 import createGlobe from "cobe";
 import { useEffect, useRef } from "react";
@@ -6,7 +6,6 @@ import { useEffect, useRef } from "react";
 export function Cobe() {
   const canvasRef = useRef();
   useEffect(() => {
-    let phi = 0;
     let width = 0;
     const onResize = () => canvasRef.current && (width = canvasRef.current.offsetWidth)
     window.addEventListener('resize', onResize)
@@ -14,7 +13,7 @@ export function Cobe() {
     const globe = createGlobe(canvasRef.current, {
       devicePixelRatio: 2,
       width: width * 2,
-      height: width * 2,
+      height: width * 2 * 0.4,
       phi: 0,
       theta: 0.3,
       dark: 1,
@@ -25,13 +24,11 @@ export function Cobe() {
       markerColor: [251 / 255, 100 / 255, 21 / 255],
       glowColor: [1.2, 1.2, 1.2],
       markers: [],
+      scale: 2.5,
+      offset: [0, width * 2 * 0.4 * 0.6],
       onRender: (state) => {
-        // Called on every animation frame.
-        // `state` will be an empty object, return updated params.
-        state.phi = phi
-        phi += 0.005
         state.width = width * 2
-        state.height = width * 2
+        state.height = width * 2 * 0.4
       }
     })
     setTimeout(() => canvasRef.current.style.opacity = '1')
@@ -39,8 +36,7 @@ export function Cobe() {
   }, [])
   return <div style={{
     width: '100%',
-    maxWidth: 600,
-    aspectRatio: 1,
+    aspectRatio: 1/.4,
     margin: 'auto',
     position: 'relative',
   }}>
@@ -59,4 +55,4 @@ export function Cobe() {
 
 <Cobe/>
 
-Change the `phi` value over time.
+Scaling and moving the globe on the canvas.

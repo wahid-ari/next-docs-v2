@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .nextra-body {
@@ -63,7 +63,7 @@ a {
 }
 
 article code {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Plus Jakarta Sans', monospace;
 }
 
 footer .py-12 {

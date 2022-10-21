@@ -73,7 +73,7 @@ export function Cobe() {
         transition: 'opacity 1s ease',
       }}
     />
-    <div className="flex justify-center control-buttons" style={{ gap: '.5rem' }}>
+    <div className="flex flex-wrap justify-center control-buttons" style={{ gap: '.5rem' }}>
       Rotate to:
       <button onClick={() => {
         focusRef.current = locationToAngles(37.78, -122.412)
@@ -94,8 +94,6 @@ export function Cobe() {
 <Cobe/>
 
 Transforming longitude and latitude to angles, and controlling the animation direction by comparing current angles to the target.
-
-[View source of this example on GitHub](https://github.com/shuding/cobe/blob/main/website/pages/docs/showcases/rotate-to-location.mdx)
 
 <style jsx global>{`
 .control-buttons button {
