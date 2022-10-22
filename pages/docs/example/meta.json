@@ -1,4 +1,5 @@
 {
+  "template": "Template",
   "get": "Get",
   "create": "Create",
   "create-formdata": "Create (Form Data)",

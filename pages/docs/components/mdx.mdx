@@ -193,10 +193,10 @@ Renders:
 console.log("hello, world");
 ```
 
-You can also add the `highlight=<line|range>` modifier to highlight specific lines:
+You can also add the `{line number, line number-line number}` modifier to highlight specific lines:
 
 ````markdown filename="index.mdx"
-```jsx filename="index.mdx" highlight=4,6-8
+```jsx filename="index.mdx" {4, 7-8}
 import useSWR from "swr";
 
 function Profile() {
@@ -209,7 +209,7 @@ function Profile() {
 ```
 ````
 
-```jsx filename="index.mdx"
+```jsx filename="index.mdx" {4, 7-8}
 import useSWR from "swr";
 
 function Profile() {
