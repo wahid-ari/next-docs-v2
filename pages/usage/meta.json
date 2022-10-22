@@ -1,9 +1,0 @@
-{
-  "basic": { 
-    "title": "Basic",
-    "theme": {
-      "breadcrumb": false
-    }
-  },
-  "error": "Error"
-}

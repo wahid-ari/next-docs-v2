@@ -9,7 +9,7 @@ import Accordion from "@components/Accordion";
 import Tabs from "@components/Tabs";
 import demo from "@public/demo.png";
 
-# MDX Component
+# Custom Component
 
 ## Nextra Tabs
 
@@ -20,6 +20,7 @@ import demo from "@public/demo.png";
 	<Nextra.Tab>yarn</Nextra.Tab>
 </Nextra.Tabs>
 ```
+Render:
 
 <Nextra.Tabs items={["npm", "pnpm", "yarn"]}>
 	<Nextra.Tab>
@@ -64,6 +65,7 @@ import Tabs from "@components/Tabs";
 	}
 />;
 ```
+Render:
 
 <Tabs
 	tabsA="Tabs A"
@@ -106,6 +108,9 @@ import Accordion from '@components/Accordion'
 	}
 />
 ```
+
+Render:
+
 <Accordion title="Accordion A" body="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." />
 <Accordion
 	title="Accordion B"
@@ -135,6 +140,8 @@ import Badge from '@components/Badge'
 <Badge variant="dark">Dark</Badge>
 ```
 
+Render:<br/><br/>
+
 <div className="flex flex-wrap gap-y-3">
 	<Badge>😂 Default</Badge>
 	<Badge variant="success">Success</Badge>
@@ -159,6 +166,8 @@ import BadgeOutline from '@components/BadgeOutline'
 <BadgeOutline variant="dark">Dark</BadgeOutline>
 ```
 
+Render:<br/><br/>
+
 <div className="flex flex-wrap gap-y-3">
 	<BadgeOutline>😂 Default</BadgeOutline>
 	<BadgeOutline variant="success">Success</BadgeOutline>
@@ -182,6 +191,8 @@ import Alert from '@components/Alert'
 <Alert variant="danger">Danger</Alert>
 <Alert variant="dark">Dark</Alert>
 ```
+
+Render:<br/><br/>
 
 <Alert>😂 Default</Alert>
 <Alert variant="success">
@@ -209,6 +220,8 @@ import AlertOutline from '@components/AlertOutline'
 <AlertOutline variant="dark">Dark</AlertOutline>
 ```
 
+Render:<br/><br/>
+
 <AlertOutline>😂 Default</AlertOutline>
 <AlertOutline variant="success">
 	<span className="font-semibold">Success !</span> Success message
@@ -221,180 +234,6 @@ import AlertOutline from '@components/AlertOutline'
 <AlertOutline variant="danger">Danger</AlertOutline>
 <AlertOutline variant="dark">Dark</AlertOutline>
 
-## Heading
-
-```html filename="index.mdx"
-<h1>**Hello**, This Is a _Title_ Inside `h1`</h1>
-{/* using html tag to avoid being rendered in the sidebar */}
-```
-
-<h1>**Hello**, This Is a _Title_ Inside `h1`</h1>
-{/* using html tag to avoid being rendered in the sidebar */}
-
-```html filename="index.mdx"
-<h2>**Hello**, This Is a _Title_ Inside `h2`</h2>
-{/* using html tag to avoid being rendered in the sidebar */}
-```
-
-<h2>**Hello**, This Is a _Title_ Inside `h2`</h2>
-{/* using html tag to avoid being rendered in the sidebar */}
-
-```markdown filename="index.mdx"
-### **Hello**, This Is a _Title_ Inside `h3`
-```
-
-<h3>**Hello**, This Is a _Title_ Inside `h3`</h3>
-
-```markdown filename="index.mdx"
-#### **Hello**, This Is a _Title_ Inside `h4`
-```
-
-<h4>**Hello**, This Is a _Title_ Inside `h4`</h4>
-
-```markdown filename="index.mdx"
-##### **Hello**, This Is a _Title_ Inside `h5`
-```
-
-<h5>**Hello**, This Is a _Title_ Inside `h5`</h5>
-
-```markdown filename="index.mdx"
-###### **Hello**, This Is a _Title_ Inside `h6`
-```
-
-<h6>**Hello**, This Is a _Title_ Inside `h6`</h6>
-
-## Text
-
-```markdown filename="index.mdx"
-With Nextra, all your `.md` and `.mdx` files under the pages directory will be rendered with [MDX](https://mdxjs.com/about), it's an
-advanced Markdown format with React component support.
-```
-
-With Nextra, all your `.md` and `.mdx` files under the pages directory will be rendered with [MDX](https://mdxjs.com/about), it's an
-advanced Markdown format with React component support.
-
-## Text Variant
-
-```markdown filename="index.mdx"
-**bold**
-```
-
-**bold**
-
-```markdown filename="index.mdx"
-**_italicized bold_**
-```
-
-**_italicized bold_**
-
-```markdown filename="index.mdx"
-_italicized_
-```
-
-_italicized_
-
-```markdown filename="index.mdx"
-~~strikethrough.~~
-```
-
-~~strikethrough.~~
-
-## Emoji ⛺
-
-[Emoji Docs](https://emojipedia.org/) 😂
-
-⚠️ ⛔ ✅ ☑️ ✔️ ❌ 🚀 ⏱️ 💻 📁 🔒 🛠️ 📢 🔔 💡 📓 📆 🌄 🌇 🌍 🌒 ⚡ ❄️ 🔥 ⭐☀️ 
-
-## Line Separator
-
-```markdown filename="index.mdx"
----
-```
-
----
-
-## Image
-
-**External URL :**
-
-```markdown filename="index.mdx"
-![Image External](https://source.unsplash.com/eaxwP9J_V6s/600x300)
-```
-
-![Image External](https://source.unsplash.com/eaxwP9J_V6s/600x300)
-
-**Static Image URL :**
-
-If the `demo.png` file is located at `/public/demo.png`, you can use the code below to display it:
-
-```markdown filename="index.mdx"
-![Image External](../../public/demo.png)
-```
-
-![Image External](../../public/demo.png)
-
-**Static Next/Image :**
-
-You can use [Next.js Image](https://nextjs.org/docs/basic-features/image-optimization) directly in MDX.
-
-If the `demo.png` file is located at `/public/demo.png`, you can use the code below to display it:
-
-```js filename="index.mdx"
-import Image from 'next/image'
-
-<Image src="/demo.png" alt="Hello" width={500} height={300} />
-```
-
-<Image src="/demo.png" alt="Hello" width={500} height={300} />
-
-## Link
-
-```markdown filename="index.mdx"
-[MDX](https://mdxjs.com/about), it's an external link
-```
-
-[MDX](https://mdxjs.com/about), it's an external link
-
-```markdown filename="index.mdx"
-[Index](/), it's an internal link
-```
-
-[Index](/), it's an internal link
-
-## List
-
-```markdown filename="index.mdx"
-1. one
-2. two
-3. three
-```
-
-1. one
-2. two
-3. three
-
-```markdown filename="index.mdx"
-- one
-- two
-- three
-```
-
-- one
-- two
-- three
-
-## Task List
-
-```markdown filename="index.mdx"
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
-```
-
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
-
 ## Custom div
 
 ```html filename="index.mdx"
@@ -403,191 +242,73 @@ import Image from 'next/image'
 </div>
 ```
 
+Render:
+
 <div className="p-4 border border-gray-200 dark:border-neutral-900 rounded mt-6">
 	Stars on GitHub!
 </div>
 
-## Syntax Highlighting
-
-Automatically syntax highlighting:
-
-````markdown filename="index.mdx"
-```js
-console.log("hello, world");
-```
-````
-
-Renders:
-
-```js filename="index.mdx"
-console.log("hello, world");
-```
-
-You can also add the `highlight=<line|range>` modifier to highlight specific lines:
-
-````markdown filename="index.mdx"
-```jsx highlight=4,6-8
-import useSWR from "swr";
-
-function Profile() {
-	const { data, error } = useSWR("/api/user", fetcher);
-
-	if (error) return <div>failed to load</div>;
-	if (!data) return <div>loading...</div>;
-	return <div>hello {data.name}!</div>;
-}
-```
-````
-
-Renders:
-
-````markdown filename="index.mdx"
-```jsx highlight=4,6-8
-import useSWR from "swr";
-
-function Profile() {
-	const { data, error } = useSWR("/api/user", fetcher);
-
-	if (error) return <div>failed to load</div>;
-	if (!data) return <div>loading...</div>;
-	return <div>hello {data.name}!</div>;
-}
-```
-````
-
-## Inline Code
-
-```markdown filename="index.mdx"
-You can use \`content\` to wrap inline code content like: `let x = 1`.
-```
-
-You can use \`content\` to wrap inline code content like: `let x = 1`.
-
-## Blockquote
-
-```markdown filename="index.mdx"
-> Where some people measure progress in answers-right per test or tests-passed per year, we are more interested in Sistine-Chapel-Ceilings per Lifetime.
->
-> — Alan Kay, A Personal Computer for Children of All Ages
-```
-
-> Where some people measure progress in answers-right per test or tests-passed per year, we are more interested in Sistine-Chapel-Ceilings per Lifetime.
->
-> — Alan Kay, A Personal Computer for Children of All Ages
-
-Nested quotes:
-
-```markdown filename="index.mdx"
-> > Where some people measure progress in answers-right per test or tests-passed per year, we are more interested in Sistine-Chapel-Ceilings per Lifetime.
-> >
-> > — Alan Kay, A Personal Computer for Children of All Ages
->
-> This is **great**.
->
-> — Shu Ding.
-```
-
-> > Where some people measure progress in answers-right per test or tests-passed per year, we are more interested in Sistine-Chapel-Ceilings per Lifetime.
-> >
-> > — Alan Kay, A Personal Computer for Children of All Ages
->
-> This is **great**.
->
-> — Shu Ding.
-
-## Table
-
-```jsx filename="index.mdx"
-| Syntax        | Description |   Test Text |
-| :------------ | :---------: | ----------: |
-| Header        |    Title    | Here's this |
-| Paragraph     |    Text     |    And more |
-| Strikethrough |             |    ~~Text~~ |
-```
-
-| Syntax        | Description |   Test Text |
-| :------------ | :---------: | ----------: |
-| Header        |    Title    | Here's this |
-| Paragraph     |    Text     |    And more |
-| Strikethrough |             |    ~~Text~~ |
-
-```jsx filename="index.mdx"
-| Badge                                    | Description |                               Code                         | Icon |
-| :--------------------------------------- | :---------: | --------------------------------------------------------:  | ---: |
-| <Badge>Default</Badge>                   |   Default   | <span className="font-semibold text-blue-500">100</span>   |  ☑️ |
-| <Badge variant="success">Success</Badge> |   Success   | <span className="font-semibold text-green-500">200</span>  |  ✅ |
-| <Badge variant="info">Warning</Badge>    |   Warning   | <span className="font-semibold text-orange-500">400</span> |  ⚠️ |
-| <Badge variant="danger">Danger</Badge>   |   Danger    | <span className="font-semibold text-red-500">500</span>    |  ⛔ |
-```
-
-| Badge                                    | Description |                               Code                           | Icon |
-| :--------------------------------------- | :---------: | ----------------------------------------------------------:  | ---: |
-| <Badge>Default</Badge>                   |   Default   | <span className="font-semibold text-blue-500">100</span>   |  ☑️ |
-| <Badge variant="success">Success</Badge> |   Success   | <span className="font-semibold text-green-500">200</span>  |  ✅ |
-| <Badge variant="info">Warning</Badge>    |   Warning   | <span className="font-semibold text-orange-500">400</span> |  ⚠️ |
-| <Badge variant="danger">Danger</Badge>   |   Danger    | <span className="font-semibold text-red-500">500</span>    |  ⛔ |
-
-## React Components
-
-React components and Markdown can be **mixed together**, for instance:
+## Callout
 
 ### Default
 
-<Callout emoji="👾">
-	**Space Invaders** is a 1978 shoot 'em up arcade game developed by Tomohiro
-	Nishikado.
-</Callout>
+```js filename="index.mdx"
+import Callout from 'nextra-theme-docs/callout'
 
-```mdx filename="index.mdx"
-import Callout from "nextra-theme-docs/callout";
-
-<Callout emoji="👾">
+<Callout emoji="⚡">
 	**Space Invaders** is a 1978 shoot 'em up arcade game developed by Tomohiro
 	Nishikado.
 </Callout>
 ```
+
+<Callout emoji="⚡">
+	**Space Invaders** is a 1978 shoot 'em up arcade game developed by Tomohiro
+	Nishikado.
+</Callout>
+
+### Info
+
+```js filename="index.mdx"
+import Callout from 'nextra-theme-docs/callout'
+
+<Callout type="info" emoji="☑️">
+	**Space Invaders** is a 1978 shoot 'em up arcade game developed by Tomohiro
+	Nishikado.
+</Callout>
+```
+
+<Callout type="info" emoji="☑️">
+	**Space Invaders** is a 1978 shoot 'em up arcade game developed by Tomohiro
+	Nishikado.
+</Callout>
 
 ### Warning
 
-<Callout type="warning" emoji="⚠️">
-	This API will be deprecated soon.
-</Callout>
-
-```mdx filename="index.mdx"
-import Callout from "nextra-theme-docs/callout";
+```js filename="index.mdx"
+import Callout from 'nextra-theme-docs/callout'
 
 <Callout type="warning" emoji="⚠️">
 	This API will be deprecated soon.
 </Callout>
 ```
+
+<Callout type="warning" emoji="⚠️">
+	This API will be deprecated soon.
+</Callout>
 
 ### Error
 
-<Callout type="error" emoji="🚫">
-	This is a dangerous feature that can cause everything to explode.
-</Callout>
+```js filename="index.mdx"
+import Callout from 'nextra-theme-docs/callout'
 
-```mdx filename="index.mdx"
-import Callout from "nextra-theme-docs/callout";
-
-<Callout type="error" emoji="️🚫">
+<Callout type="error" emoji="️⛔">
 	This is a dangerous feature that can cause everything to explode.
 </Callout>
 ```
 
-```html filename="index.mdx"
-> <Callout>
-> 	Give [**Next Docs**](https://github.com/wahidari/next-docs-v2) a star!
-> </Callout>
-```
-
-Renders:
-
-> <Callout>
-> 	Give [**Next Docs**](https://github.com/wahidari/next-docs-v2) a star!
-> </Callout>
-
-## Callout
+<Callout type="error" emoji="️⛔">
+	This is a dangerous feature that can cause everything to explode.
+</Callout>
 
 You can use import and use React components inside your Markdown files like this:
 
@@ -606,7 +327,7 @@ import Callout from 'nextra-theme-docs/callout'
 </div>
 ```
 
-Generates:
+Render:
 
 <div className="p-4 border border-gray-200 dark:border-gray-900 rounded mt-6">
 **Markdown With React Components**
@@ -621,10 +342,23 @@ Generates:
 
 ## Bleed
 
-`import Bleed from 'nextra-theme-docs/bleed'`
+```jsx
+import Bleed from 'nextra-theme-docs/bleed'
+
+<Bleed>
+  <div style={{ border: '1px solid #888', padding: '4rem 2.5rem', textAlign: 'center' }}>
+    _There is nothing to writing. All you do is sit down at a typewriter and **bleed**._
+
+    — Ernest Hemingway
+
+  </div>
+</Bleed>
+```
 
 When wrapping your content with `<Bleed>`, it will be slightly wider than the container
 and will overflow on both sides.
+
+Render:
 
 <Bleed>
   <div style={{ border: '1px solid #888', padding: '4rem 2.5rem', textAlign: 'center' }}>
@@ -640,29 +374,16 @@ looks nicer in a larger size.
 
 For example you can put text, image, video or any component inside:
 
+```jsx
+import Bleed from 'nextra-theme-docs/bleed'
 
 <Bleed>Hey, I can use **Markdown** syntax here.</Bleed>
 
 <Bleed>![Landscape](https://source.unsplash.com/eaxwP9J_V6s/1600x398)</Bleed>
+```
 
-## Embed Iframe
+Render:
 
-<Bleed>
-	<iframe
-		width="100%"
-		height="430"
-		src="https://www.youtube.com/embed/3hccXiXI0u8"
-		frameBorder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-		allowFullScreen
-	/>
-</Bleed>
+<Bleed>Hey, I can use **Markdown** syntax here.</Bleed>
 
-<Bleed>
-	<iframe
-		src="https://codesandbox.io/embed/swr-states-4une7"
-		width="100%"
-		height="500px"
-		title="SWR-States"
-	></iframe>
-</Bleed>
+<Bleed>![Landscape](https://source.unsplash.com/eaxwP9J_V6s/1600x398)</Bleed>

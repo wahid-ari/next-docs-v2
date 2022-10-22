@@ -8,8 +8,8 @@
     "title": "Docs",
     "type": "page"
   },
-  "usage": {
-    "title": "Usage",
+  "libs": {
+    "title": "Libs",
     "type": "page"
   },
   "blog": {
