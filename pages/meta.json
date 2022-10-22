@@ -8,6 +8,10 @@
     "title": "Docs",
     "type": "page"
   },
+  "features": {
+    "title": "Features",
+    "type": "page"
+  },
   "libs": {
     "title": "Libs",
     "type": "page"
