@@ -7,9 +7,115 @@ import Alert from "@components/Alert";
 import AlertOutline from "@components/AlertOutline";
 import Accordion from "@components/Accordion";
 import Tabs from "@components/Tabs";
+import {
+	AcademicCapIcon,
+	AdjustmentsHorizontalIcon,
+	ArchiveBoxIcon,
+	BeakerIcon,
+	BellIcon,
+	BookmarkIcon,
+	BanknotesIcon,
+	BriefcaseIcon,
+	BoltIcon,
+	BuildingLibraryIcon,
+	CheckBadgeIcon,
+	CameraIcon,
+	ChartBarIcon,
+	ClipboardDocumentCheckIcon,
+	CreditCardIcon,
+	CubeIcon,
+	CircleStackIcon,
+	ComputerDesktopIcon,
+	CalendarDaysIcon,
+	CodeBracketSquareIcon,
+	CommandLineIcon,
+	FaceSmileIcon,
+	FilmIcon,
+	FireIcon,
+	FolderOpenIcon,
+	GiftIcon,
+	GlobeAltIcon,
+	InboxArrowDownIcon,
+	IdentificationIcon,
+	LightBulbIcon,
+	MegaphoneIcon,
+	MicrophoneIcon,
+	MoonIcon,
+	NewspaperIcon,
+	PlayCircleIcon,
+	PhotoIcon,
+	PrinterIcon,
+	RadioIcon,
+	RssIcon,
+	RocketLaunchIcon,
+	SunIcon,
+	SwatchIcon,
+	ServerStackIcon,
+	ShieldCheckIcon,
+	TrashIcon,
+} from "@heroicons/react/24/outline";
 import demo from "@public/demo.png";
 
 # Custom Component
+
+## Heroicons
+
+[Heroicons](https://heroicons.com/)
+
+<br />
+<div className="flex gap-3 flex-wrap sm:w-[540px]">
+	<CheckBadgeIcon className="h-6 w-6" />
+	<AcademicCapIcon className="h-6 w-6" />
+	<AdjustmentsHorizontalIcon className="h-6 w-6" />
+	<ArchiveBoxIcon className="h-6 w-6" />
+	<BeakerIcon className="h-6 w-6" />
+	<BellIcon className="h-6 w-6" />
+	<BookmarkIcon className="h-6 w-6" />
+	<BriefcaseIcon className="h-6 w-6" />
+	<CameraIcon className="h-6 w-6" />
+	<BanknotesIcon className="h-6 w-6" />
+	<ChartBarIcon className="h-6 w-6" />
+	<ClipboardDocumentCheckIcon className="h-6 w-6" />
+	<SwatchIcon className="h-6 w-6" />
+	<CreditCardIcon className="h-6 w-6" />
+	<CubeIcon className="h-6 w-6" />
+	<CircleStackIcon className="h-6 w-6" />
+	<ComputerDesktopIcon className="h-6 w-6" />
+	<FaceSmileIcon className="h-6 w-6" />
+	<FilmIcon className="h-6 w-6" />
+	<FireIcon className="h-6 w-6" />
+	<FolderOpenIcon className="h-6 w-6" />
+	<GiftIcon className="h-6 w-6" />
+	<GlobeAltIcon className="h-6 w-6" />
+	<InboxArrowDownIcon className="h-6 w-6" />
+	<BuildingLibraryIcon className="h-6 w-6" />
+	<LightBulbIcon className="h-6 w-6" />
+	<BoltIcon className="h-6 w-6" />
+	<NewspaperIcon className="h-6 w-6" />
+	<TrashIcon className="h-6 w-6" />
+	<CalendarDaysIcon className="h-6 w-6" />
+	<CodeBracketSquareIcon className="h-6 w-6" />
+	<CommandLineIcon className="h-6 w-6" />
+	<IdentificationIcon className="h-6 w-6" />
+	<MegaphoneIcon className="h-6 w-6" />
+	<MicrophoneIcon className="h-6 w-6" />
+	<MoonIcon className="h-6 w-6" />
+	<SunIcon className="h-6 w-6" />
+	<PlayCircleIcon className="h-6 w-6" />
+	<PhotoIcon className="h-6 w-6" />
+	<PrinterIcon className="h-6 w-6" />
+	<RadioIcon className="h-6 w-6" />
+	<RssIcon className="h-6 w-6" />
+	<RocketLaunchIcon className="h-6 w-6" />
+	<ServerStackIcon className="h-6 w-6" />
+	<ShieldCheckIcon className="h-6 w-6" />
+</div>
+
+```jsx filename="index.mdx" 
+import { CheckBadgeIcon } from "@heroicons/react/24/outline";
+
+<CheckBadgeIcon className="h-6 w-6" />
+```
 
 ## Nextra Tabs
 
@@ -20,6 +126,7 @@ import demo from "@public/demo.png";
 	<Nextra.Tab>yarn</Nextra.Tab>
 </Nextra.Tabs>
 ```
+
 Render:
 
 <Nextra.Tabs items={["npm", "pnpm", "yarn"]}>
@@ -65,6 +172,7 @@ import Tabs from "@components/Tabs";
 	}
 />;
 ```
+
 Render:
 
 <Tabs
@@ -90,20 +198,26 @@ Render:
 ## Accordion
 
 <br />
-```js filename="index.mdx"
-import Accordion from '@components/Accordion'
+```js filename="index.mdx" import Accordion from '@components/Accordion'
 
-<Accordion title="Accordion A" body="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." />
+<Accordion
+	title="Accordion A"
+	body="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+/>
 <Accordion
 	title="Accordion B"
 	body={
 		<div>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting
+			<p>
+				Lorem Ipsum is simply dummy text of the printing and typesetting
 				industry. Lorem Ipsum has been the industry's standard dummy text ever
-				since the 1500s.</p>
-			<p className="!mt-2">Contrary to popular belief, Lorem Ipsum is not simply random text. It
+				since the 1500s.
+			</p>
+			<p className="!mt-2">
+				Contrary to popular belief, Lorem Ipsum is not simply random text. It
 				has roots in a piece of classical Latin literature from 45 BC, making it
-				over 2000 years old.</p>
+				over 2000 years old.
+			</p>
 		</div>
 	}
 />
@@ -111,17 +225,24 @@ import Accordion from '@components/Accordion'
 
 Render:
 
-<Accordion title="Accordion A" body="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." />
+<Accordion
+	title="Accordion A"
+	body="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+/>
 <Accordion
 	title="Accordion B"
 	body={
 		<div>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting
+			<p>
+				Lorem Ipsum is simply dummy text of the printing and typesetting
 				industry. Lorem Ipsum has been the industry's standard dummy text ever
-				since the 1500s.</p>
-			<p className="!mt-2">Contrary to popular belief, Lorem Ipsum is not simply random text. It
+				since the 1500s.
+			</p>
+			<p className="!mt-2">
+				Contrary to popular belief, Lorem Ipsum is not simply random text. It
 				has roots in a piece of classical Latin literature from 45 BC, making it
-				over 2000 years old.</p>
+				over 2000 years old.
+			</p>
 		</div>
 	}
 />
@@ -237,7 +358,9 @@ Render:<br/><br/>
 ## Custom div
 
 ```html filename="index.mdx"
-<div className="p-4 border border-gray-200 dark:border-neutral-900 rounded mt-6">
+<div
+	className="p-4 border border-gray-200 dark:border-neutral-900 rounded mt-6"
+>
 	Stars on GitHub!
 </div>
 ```
@@ -253,12 +376,12 @@ Render:
 ### Default
 
 ```js filename="index.mdx"
-import Callout from 'nextra-theme-docs/callout'
+import Callout from "nextra-theme-docs/callout";
 
 <Callout emoji="⚡">
 	**Space Invaders** is a 1978 shoot 'em up arcade game developed by Tomohiro
 	Nishikado.
-</Callout>
+</Callout>;
 ```
 
 <Callout emoji="⚡">
@@ -269,12 +392,12 @@ import Callout from 'nextra-theme-docs/callout'
 ### Info
 
 ```js filename="index.mdx"
-import Callout from 'nextra-theme-docs/callout'
+import Callout from "nextra-theme-docs/callout";
 
 <Callout type="info" emoji="☑️">
 	**Space Invaders** is a 1978 shoot 'em up arcade game developed by Tomohiro
 	Nishikado.
-</Callout>
+</Callout>;
 ```
 
 <Callout type="info" emoji="☑️">
@@ -285,11 +408,11 @@ import Callout from 'nextra-theme-docs/callout'
 ### Warning
 
 ```js filename="index.mdx"
-import Callout from 'nextra-theme-docs/callout'
+import Callout from "nextra-theme-docs/callout";
 
 <Callout type="warning" emoji="⚠️">
 	This API will be deprecated soon.
-</Callout>
+</Callout>;
 ```
 
 <Callout type="warning" emoji="⚠️">
@@ -299,11 +422,11 @@ import Callout from 'nextra-theme-docs/callout'
 ### Error
 
 ```js filename="index.mdx"
-import Callout from 'nextra-theme-docs/callout'
+import Callout from "nextra-theme-docs/callout";
 
 <Callout type="error" emoji="️⛔">
 	This is a dangerous feature that can cause everything to explode.
-</Callout>
+</Callout>;
 ```
 
 <Callout type="error" emoji="️⛔">
@@ -313,18 +436,17 @@ import Callout from 'nextra-theme-docs/callout'
 You can use import and use React components inside your Markdown files like this:
 
 ```js filename="index.mdx"
-import Callout from 'nextra-theme-docs/callout'
+import Callout from "nextra-theme-docs/callout";
 
 <div className="p-4 border border-gray-200 dark:border-gray-900 rounded mt-6">
 	**Markdown With React Components**
-
 	<Callout emoji="✅">
 		**MDX** (the library), at its core, transforms MDX (the syntax) to JSX. It
-		receives an MDX string and outputs a _JSX string_. It does this by parsing the
-		MDX document to a syntax tree and then generates a JSX document from that
-		tree.
+		receives an MDX string and outputs a _JSX string_. It does this by parsing
+		the MDX document to a syntax tree and then generates a JSX document from
+		that tree.
 	</Callout>
-</div>
+</div>;
 ```
 
 Render:
@@ -343,16 +465,20 @@ Render:
 ## Bleed
 
 ```jsx
-import Bleed from 'nextra-theme-docs/bleed'
+import Bleed from "nextra-theme-docs/bleed";
 
 <Bleed>
-  <div style={{ border: '1px solid #888', padding: '4rem 2.5rem', textAlign: 'center' }}>
-    _There is nothing to writing. All you do is sit down at a typewriter and **bleed**._
-
-    — Ernest Hemingway
-
-  </div>
-</Bleed>
+	<div
+		style={{
+			border: "1px solid #888",
+			padding: "4rem 2.5rem",
+			textAlign: "center",
+		}}
+	>
+		_There is nothing to writing. All you do is sit down at a typewriter and
+		**bleed**._ — Ernest Hemingway
+	</div>
+</Bleed>;
 ```
 
 When wrapping your content with `<Bleed>`, it will be slightly wider than the container
