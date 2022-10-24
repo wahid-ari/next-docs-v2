@@ -152,48 +152,38 @@ Render:
 ```js filename="index.mdx"
 import Tabs from "@components/Tabs";
 
-<Tabs
-	tabsA="Tabs A"
-	contentA="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
-	tabsB="Tabs B"
-	contentB={
-		<div>
-			<p>
-				Lorem Ipsum is simply dummy text of the printing and typesetting
-				industry. Lorem Ipsum has been the industry's standard dummy text ever
-				since the 1500s.
-			</p>
-			<p className="!mt-2">
-				Contrary to popular belief, Lorem Ipsum is not simply random text. It
-				has roots in a piece of classical Latin literature from 45 BC, making it
-				over 2000 years old.
-			</p>
-		</div>
-	}
-/>;
+<Tabs items={["Recent", "Popular", "Trending"]}>
+	<Tabs.Tab className="p-3">
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+		Labore ullamco veniam eiusmod anim.
+	</Tabs.Tab>
+	<Tabs.Tab className="p-3">
+		Consequat cupidatat proident laborum eiusmod et officia mollit culpa ullamco commodo. 
+		Proident nostrud occaecat laboris eu velit excepteur.
+	</Tabs.Tab>
+	<Tabs.Tab className="p-3">
+		Aliquip quis adipisicing exercitation et labore proident magna culpa non. 
+		Ut fugiat eiusmod aliqua ullamco.
+	</Tabs.Tab>
+</Tabs>
 ```
 
 Render:
 
-<Tabs
-	tabsA="Tabs A"
-	contentA="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
-	tabsB="Tabs B"
-	contentB={
-		<div>
-			<p>
-				Lorem Ipsum is simply dummy text of the printing and typesetting
-				industry. Lorem Ipsum has been the industry's standard dummy text ever
-				since the 1500s.
-			</p>
-			<p className="!mt-2">
-				Contrary to popular belief, Lorem Ipsum is not simply random text. It
-				has roots in a piece of classical Latin literature from 45 BC, making it
-				over 2000 years old.
-			</p>
-		</div>
-	}
-/>
+<Tabs items={["Recent", "Popular", "Trending"]}>
+	<Tabs.Tab className="p-3">
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+		Labore ullamco veniam eiusmod anim.
+	</Tabs.Tab>
+	<Tabs.Tab className="p-3">
+		Consequat cupidatat proident laborum eiusmod et officia mollit culpa ullamco commodo. 
+		Proident nostrud occaecat laboris eu velit excepteur.
+	</Tabs.Tab>
+	<Tabs.Tab className="p-3">
+		Aliquip quis adipisicing exercitation et labore proident magna culpa non. 
+		Ut fugiat eiusmod aliqua ullamco.
+	</Tabs.Tab>
+</Tabs>
 
 ## Accordion
 

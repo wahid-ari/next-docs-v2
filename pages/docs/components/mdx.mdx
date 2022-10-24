@@ -59,18 +59,22 @@ advanced Markdown format with React component support.
 
 ```markdown filename="index.mdx"
 **bold**
+__bold__
 ```
 
 **bold**
 
 ```markdown filename="index.mdx"
 **_italicized bold_**
+***italicized bold***
+___italicized bold___
 ```
 
 **_italicized bold_**
 
 ```markdown filename="index.mdx"
 _italicized_
+*italicized*
 ```
 
 _italicized_
@@ -91,9 +95,11 @@ _italicized_
 
 ```markdown filename="index.mdx"
 ---
+***
 ```
 
 ---
+***
 
 ## Image
 
@@ -131,6 +137,14 @@ import Image from "next/image";
 
 ## Link
 
+### Autolink literals
+
+```markdown filename="index.mdx"
+www.example.com, https://example.com, and contact@example.com.
+```
+
+www.example.com, https://example.com, and contact@example.com.
+
 ```markdown filename="index.mdx"
 [MDX](https://mdxjs.com/about), it's an external link
 ```
@@ -165,6 +179,30 @@ import Image from "next/image";
 - two
 - three
 
+```markdown filename="index.mdx"
+* asterisks for unordered items
+1. decimals and a dot for ordered items
+```
+
+* asterisks for unordered items
+1. decimals and a dot for ordered items
+
+```markdown filename="index.mdx"
+* Next
+  * docs
+- Next
+  - docs
++ Next
+  + docs
+```
+
+* Next
+  * docs
+- Next
+  - docs
++ Next
+  + docs
+	
 ## Task List
 
 ```markdown filename="index.mdx"
@@ -276,6 +314,16 @@ Nested quotes:
 > — Shu Ding.
 
 ## Table
+
+```jsx filename="index.mdx"
+| Left | Center | Right |
+| :--- | :----: | ----: |
+| Left-aligned | Center-aligned | Right-aligned |
+```
+
+| Left | Center | Right |
+| :--- | :----: | ----: |
+| Left-aligned | Center-aligned | Right-aligned |
 
 ```jsx filename="index.mdx"
 | Syntax 					| Description |   Test Text |
@@ -405,3 +453,9 @@ Renders:
 	height="500px"
 	title="SWR-States"
 ></iframe>
+
+## Footnote
+
+A note[^1]
+
+[^1]: Big note.
