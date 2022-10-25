@@ -1,4 +1,4 @@
-import { Disclosure } from '@headlessui/react'
+import { Disclosure, Transition } from '@headlessui/react'
 import { ChevronRightIcon } from '@heroicons/react/24/solid'
 
 export default function Accordion({ title, body }) {
@@ -15,9 +15,17 @@ export default function Accordion({ title, body }) {
                     } w-5 h-5 text-blue-500`}
                 />
               </Disclosure.Button>
-              <Disclosure.Panel className="py-3 text-base pl-4 pr-2">
-                {body}
-              </Disclosure.Panel>
+              <Transition
+                enter="transition duration-200 ease-out"
+                enterFrom="transform scale-95 opacity-0"
+                enterTo="transform scale-100 opacity-100"
+                leave="transition duration-75 ease-out"
+                leaveFrom="transform scale-200 opacity-100"
+                leaveTo="transform scale-95 opacity-0">
+                <Disclosure.Panel className="py-3 text-base pl-4 pr-2">
+                  {body}
+                </Disclosure.Panel>
+              </Transition>
             </>
           )}
         </Disclosure>
