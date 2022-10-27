@@ -22,5 +22,41 @@
     "theme": {
       "sidebar": false
     }
+  },
+  "turbo": {
+    "title": "Turbo",
+    "type": "page"
+  },
+  "background": {
+    "title": "Background",
+    "type": "page",
+    "theme": {
+      "layout": "raw",
+      "sidebar": false,
+      "toc": true
+    }
+  },
+  "pack": {
+    "title": "Pack",
+    "type": "page",
+    "theme": {
+      "layout": "raw",
+      "sidebar": false,
+      "toc": true
+    }
+  },
+  "repo": {
+    "title": "Repo",
+    "type": "page",
+    "theme": {
+      "layout": "raw",
+      "sidebar": false,
+      "toc": true
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "display": "hidden",
+    "hidden": true
   }
 }
